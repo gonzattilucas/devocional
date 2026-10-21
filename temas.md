@@ -1,8 +1,8 @@
 # Fila de temas
 
-A rotina semanal pega o primeiro tema da lista "Próximos", escreve os 7 dias e o move para "Publicados".
+Todo domingo às 21h o Claude pede ao Lucas o tema da semana, depois do culto. O tema enviado entra no topo de "Próximos" e a semana é escrita na hora.
+Se nenhum tema chegar até segunda às 04:37, a rotina de reserva usa o primeiro tema desta lista.
 Você pode editar esta lista quando quiser: reordenar, trocar ou incluir temas e textos.
-Se a lista "Próximos" ficar vazia, a rotina escolhe um tema que continue a sequência e o registra aqui.
 
 ## Próximos
 
