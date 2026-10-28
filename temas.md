@@ -16,3 +16,4 @@ Gênesis 11.1-9 · Daniel 4.28-37 · Lucas 18.9-14 · Filipenses 2.1-11 · Tiago
 
 - Semana 1: Em quem eu realmente confio? (Jeremias 17, Lucas 12, Mateus 6, Salmo 131, Filipenses 4, 1 Pedro 5, Salmo 13)
 - Semana 2: Deus trabalhando quando eu não vejo (Gênesis 50, 1 Reis 19, Marcos 4, Habacuque 3, Lamentações 3, Isaías 40, 2 Coríntios 12 e Romanos 8)
+- Semana 3: Por amor, a partir da pregação do culto de 25/10/2026 (Isaías 62, 2 Coríntios 5.14-21, Filipenses 3 e 4, Efésios 4.29–5.2, João 13.31-35)
