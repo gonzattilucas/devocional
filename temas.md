@@ -18,3 +18,4 @@ Gênesis 11.1-9 · Daniel 4.28-37 · Lucas 18.9-14 · Filipenses 2.1-11 · Tiago
 - Semana 2: Deus trabalhando quando eu não vejo (Gênesis 50, 1 Reis 19, Marcos 4, Habacuque 3, Lamentações 3, Isaías 40, 2 Coríntios 12 e Romanos 8)
 - Semana 3: Por amor, a partir da pregação do culto de 25/10/2026 (Isaías 62, 2 Coríntios 5.14-21, Filipenses 3 e 4, Efésios 4.29–5.2, João 13.31-35)
 - Semana 4: Não fui eu que ordenei a você?, a partir da pregação do culto de 1/11/2026 (Josué 1 e 3, Jeremias 1, 1 Samuel 30, Mateus 14, Neemias 4; formato novo: um ponto do culto por dia, com outras conexões bíblicas)
+- Semana 5: E quando o dia mau chegar?, a partir da pregação do culto de 8/11/2026 (Salmos 42 e 126, Êxodo 17, Ezequiel 1–2, 1 Samuel 28 e 30, Eclesiastes 4)
