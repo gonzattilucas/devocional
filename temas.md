@@ -6,9 +6,6 @@ Você pode editar esta lista quando quiser: reordenar, trocar ou incluir temas e
 
 ## Próximos
 
-### Arrependimento: voltar de verdade
-Salmo 51 · 2 Samuel 12.1-14 · Lucas 15.11-32 · Joel 2.12-17 · 2 Coríntios 7.8-11 · Lucas 19.1-10 · 1 João 1.5–2.2
-
 ### O orgulho e a humildade
 Gênesis 11.1-9 · Daniel 4.28-37 · Lucas 18.9-14 · Filipenses 2.1-11 · Tiago 4.1-10 · João 13.1-17 · Isaías 57.15
 
@@ -19,3 +16,4 @@ Gênesis 11.1-9 · Daniel 4.28-37 · Lucas 18.9-14 · Filipenses 2.1-11 · Tiago
 - Semana 3: Por amor, a partir da pregação do culto de 25/10/2026 (Isaías 62, 2 Coríntios 5.14-21, Filipenses 3 e 4, Efésios 4.29–5.2, João 13.31-35)
 - Semana 4: Não fui eu que ordenei a você?, a partir da pregação do culto de 1/11/2026 (Josué 1 e 3, Jeremias 1, 1 Samuel 30, Mateus 14, Neemias 4; formato novo: um ponto do culto por dia, com outras conexões bíblicas)
 - Semana 5: E quando o dia mau chegar?, a partir da pregação do culto de 8/11/2026 (Salmos 42 e 126, Êxodo 17, Ezequiel 1–2, 1 Samuel 28 e 30, Eclesiastes 4)
+- Semana 6: Arrependimento: voltar de verdade, tema da fila (sem culto; Salmo 51, 2 Samuel 12, Lucas 15 e 19, Joel 2, 2 Coríntios 7, 1 João 1)
