@@ -17,3 +17,4 @@ Gênesis 11.1-9 · Daniel 4.28-37 · Lucas 18.9-14 · Filipenses 2.1-11 · Tiago
 - Semana 4: Não fui eu que ordenei a você?, a partir da pregação do culto de 1/11/2026 (Josué 1 e 3, Jeremias 1, 1 Samuel 30, Mateus 14, Neemias 4; formato novo: um ponto do culto por dia, com outras conexões bíblicas)
 - Semana 5: E quando o dia mau chegar?, a partir da pregação do culto de 8/11/2026 (Salmos 42 e 126, Êxodo 17, Ezequiel 1–2, 1 Samuel 28 e 30, Eclesiastes 4)
 - Semana 6: Arrependimento: voltar de verdade, tema da fila (sem culto; Salmo 51, 2 Samuel 12, Lucas 15 e 19, Joel 2, 2 Coríntios 7, 1 João 1)
+- Semana 7: Lobos ou ovelhas?, a partir da pregação do culto de 22/11/2026, pregador Gabriel Mendes (Mateus 7, João 10, Gálatas 5, Salmo 23, Hebreus 12, Ezequiel 34, João 15 e 21, Isaías 53)
