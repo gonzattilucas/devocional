@@ -3,290 +3,241 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>O raio-X de Deus · Devocional infantil (teste)</title>
+<title>Ovelha ou lobo? · Devocional kids</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;700&display=swap">
 <style>
-:root{
-  --bg:#fff8ec; --card:#ffffff; --ink:#2b2340; --muted:#6b6380;
-  --sol:#ffb703; --ceu:#8ecae6; --mar:#219ebc; --grama:#5fb35a; --lobo:#7d7f91; --cor:#e63946;
-  --titulo:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
-  --texto:"Nunito","Segoe UI",system-ui,sans-serif;
-}
+:root{--bg:#fff8ec;--card:#fff;--ink:#2b2340;--muted:#6b6380;--sol:#ffb703;--mar:#219ebc;--grama:#5fb35a;
+  --titulo:"Baloo 2","Trebuchet MS",system-ui,sans-serif;--texto:"Nunito","Segoe UI",system-ui,sans-serif}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--texto);font-size:1.12rem;line-height:1.65}
-.wrap{max-width:38rem;margin:0 auto;padding:16px max(16px,env(safe-area-inset-left)) 64px}
-a{color:var(--mar)}
+.wrap{max-width:38rem;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left)) 64px}
 h1,h2,h3{font-family:var(--titulo);line-height:1.15;margin:0}
-h1{font-size:2.3rem;font-weight:800}
-h2{font-size:1.55rem;font-weight:800;margin-bottom:.4rem}
-.selo{display:inline-block;font-family:var(--titulo);font-weight:600;font-size:.85rem;letter-spacing:.04em;background:var(--ink);color:#fff;border-radius:99px;padding:2px 12px}
-.sub{color:var(--muted);margin:.3rem 0 0}
-.bloco{background:var(--card);border-radius:22px;padding:20px 20px 18px;margin-top:22px;box-shadow:0 3px 0 rgba(43,35,64,.08)}
-.bloco p{margin:.55rem 0}
-.ilus{display:block;width:100%;height:auto;border-radius:16px;margin:4px 0 10px}
-.etapa{font-family:var(--titulo);font-weight:600;font-size:.9rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mar)}
+h1{font-size:2rem;font-weight:800}
+h2{font-size:1.4rem;font-weight:800;margin-bottom:.3rem}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:2px solid #f0e4cc}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:10px;padding-bottom:10px}
+.serie{font-family:var(--titulo);font-weight:600;font-size:.95rem;color:var(--muted)}
+.nav{display:flex;gap:6px;align-items:center;font-family:var(--titulo);font-weight:600}
+.nav button{font:inherit;width:2.3rem;height:2.3rem;border-radius:50%;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.nav button:disabled{opacity:.25;cursor:default}
+.nav span{min-width:4.6rem;text-align:center}
+.dia{display:none;padding-top:18px}
+.dia.on{display:block}
+.ref{color:var(--muted);margin:.2rem 0 0}
+.bloco{background:var(--card);border-radius:22px;padding:18px 20px;margin-top:18px;box-shadow:0 3px 0 rgba(43,35,64,.08)}
+.bloco p{margin:.5rem 0}
+.etapa{font-family:var(--titulo);font-weight:600;font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;color:var(--mar)}
 .verso{background:#fff3c4;border-left:6px solid var(--sol);border-radius:12px;padding:10px 14px;margin:12px 0;font-weight:700}
 .verso small{display:block;font-weight:400;color:var(--muted);margin-top:4px}
-.pista{display:flex;gap:12px;align-items:flex-start;background:#eaf6fb;border-radius:14px;padding:10px 12px;margin:10px 0}
-.pista b{font-family:var(--titulo)}
-.lupa{flex:0 0 34px}
+figure{margin:4px 0 10px}
+figure img{display:block;width:100%;height:auto;border-radius:16px;background:#f0e4cc;aspect-ratio:3/2;object-fit:cover}
 details{background:#f4f0ff;border-radius:14px;padding:10px 14px;margin:10px 0}
 details summary{cursor:pointer;font-weight:700;list-style:none}
 details summary::-webkit-details-marker{display:none}
-details summary::before{content:"🤔 ";}
-details[open] summary::before{content:"💡 ";}
-details .dica{margin:.5rem 0 0;color:#3d3460}
+details summary::before{content:"🤔 "}
+details[open] summary::before{content:"💡 "}
+.dica{margin:.5rem 0 0}
 .dica::before{content:"Dica: ";font-weight:700}
-.raio{border:3px dashed var(--ceu);border-radius:16px;padding:12px 14px;margin:12px 0}
-.raio button{font:inherit;font-family:var(--titulo);font-weight:600;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:6px 16px;cursor:pointer;margin-top:6px}
-.raio button[aria-expanded="true"]{background:var(--mar)}
-.raio .dentro{display:none;margin-top:10px;background:#0f1c2e;color:#cdeefe;border-radius:12px;padding:10px 12px;font-size:1.02rem}
-.raio .dentro.on{display:block}
-.desafio{background:var(--grama);color:#fff}
-.desafio h2{color:#fff}
+.missao{background:var(--grama);color:#fff}
+.missao .etapa{color:#eaffe6}
 .oracao{font-style:italic}
-.pais{background:transparent;box-shadow:none;border:2px solid #eadfca;font-size:.98rem}
-.pais li{margin:.35rem 0}
-.rodape{text-align:center;color:var(--muted);font-size:.9rem;margin-top:26px}
-button:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+.lido{font:inherit;font-family:var(--titulo);font-weight:600;background:var(--ink);color:#fff;border:0;border-radius:99px;padding:8px 20px;margin-top:16px;cursor:pointer}
+.lido.ok{background:var(--grama)}
+.pais{background:transparent;box-shadow:none;border:2px solid #eadfca;font-size:.96rem}
+.pais li{margin:.3rem 0}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
 </style>
 </head>
 <body>
+<header><div class="wrap">
+  <span class="serie">Devocional kids · Ovelha ou lobo?</span>
+  <div class="nav"><button id="ant" aria-label="Dia anterior">‹</button><span id="cont">Dia 1 de 7</span><button id="prox" aria-label="Próximo dia">›</button></div>
+</div></header>
 <main class="wrap">
 
-  <span class="selo">Devocional kids · teste</span>
-  <h1 style="margin-top:8px">O raio-X de Deus</h1>
-  <p class="sub">1 Samuel 16.1-13 · leitura de uns 5 minutos</p>
-
-  <!-- 1. AQUECIMENTO -->
+<!-- DIA 1 -->
+<article class="dia" id="d1">
+  <h1>Deus vê o coração</h1>
+  <p class="ref">1 Samuel 16.6-13 · uns 3 minutos</p>
   <section class="bloco">
-    <svg class="ilus" viewBox="0 0 600 300" role="img" aria-label="Um lobo usando uma fantasia de ovelha, com o rabo cinza aparecendo para fora">
-      <rect width="600" height="300" fill="#8ecae6"/>
-      <circle cx="520" cy="60" r="34" fill="#ffb703"/>
-      <path d="M0 230 Q150 190 300 225 T600 215 V300 H0Z" fill="#5fb35a"/>
-      <!-- rabo de lobo escapando -->
-      <path d="M215 205 Q160 200 150 160 Q185 175 228 185Z" fill="#7d7f91"/>
-      <path d="M150 160 Q160 175 172 178" stroke="#5b5d6e" stroke-width="3" fill="none"/>
-      <!-- pernas -->
-      <rect x="250" y="215" width="20" height="45" rx="8" fill="#5b5d6e"/>
-      <rect x="330" y="215" width="20" height="45" rx="8" fill="#5b5d6e"/>
-      <!-- corpo de lã (fantasia) -->
-      <g fill="#ffffff" stroke="#e5e0d8" stroke-width="3">
-        <circle cx="250" cy="185" r="38"/><circle cx="295" cy="165" r="42"/><circle cx="345" cy="185" r="38"/>
-        <circle cx="300" cy="205" r="40"/><circle cx="220" cy="200" r="26"/><circle cx="370" cy="205" r="26"/>
-      </g>
-      <!-- ziper da fantasia -->
-      <path d="M298 128 V240" stroke="#c9c2b6" stroke-width="3" stroke-dasharray="6 5"/>
-      <!-- cabeça de lobo -->
-      <path d="M380 130 L392 82 L412 118Z" fill="#7d7f91"/>
-      <path d="M440 120 L462 80 L466 128Z" fill="#7d7f91"/>
-      <ellipse cx="425" cy="150" rx="48" ry="40" fill="#7d7f91"/>
-      <path d="M455 150 Q500 160 498 172 Q470 185 445 175Z" fill="#9a9cae"/>
-      <circle cx="498" cy="168" r="7" fill="#2b2340"/>
-      <path d="M455 178 L462 186 L468 178" fill="#fff"/>
-      <!-- capuz de ovelha por cima da cabeça -->
-      <g fill="#ffffff" stroke="#e5e0d8" stroke-width="3">
-        <circle cx="395" cy="118" r="16"/><circle cx="420" cy="108" r="18"/><circle cx="447" cy="114" r="16"/>
-      </g>
-      <ellipse cx="380" cy="122" rx="16" ry="8" fill="#fff" stroke="#e5e0d8" stroke-width="3" transform="rotate(-25 380 122)"/>
-      <!-- olho espertinho -->
-      <ellipse cx="438" cy="145" rx="9" ry="7" fill="#fff"/>
-      <circle cx="441" cy="146" r="4" fill="#2b2340"/>
-      <path d="M426 135 L448 139" stroke="#2b2340" stroke-width="4" stroke-linecap="round"/>
-      <!-- balão -->
-      <rect x="40" y="30" width="230" height="62" rx="20" fill="#fff"/>
-      <path d="M200 90 L220 120 L225 90Z" fill="#fff"/>
-      <text x="155" y="70" text-anchor="middle" font-family="Baloo 2, sans-serif" font-size="28" font-weight="800" fill="#2b2340">Méééé... 😇</text>
-    </svg>
-    <span class="etapa">Aquecimento</span>
-    <p>Numa festa à fantasia, basta uma capa e uma máscara e você vira super-herói. Mas quando a capa vai pro cesto de roupa suja, quem é você de verdade?</p>
-    <p>Jesus avisou que existem lobos vestidos de ovelha (Mateus 7.15). A fantasia engana os olhos. Hoje, até um profeta vai ser enganado.</p>
-  </section>
-
-  <!-- 2. A HISTÓRIA -->
-  <section class="bloco">
-    <svg class="ilus" viewBox="0 0 600 300" role="img" aria-label="O profeta Samuel, idoso, segurando um chifre de azeite e olhando para cima, para Eliabe, alto e forte">
-      <rect width="600" height="300" fill="#ffe8b6"/>
-      <path d="M0 250 H600 V300 H0Z" fill="#e0b97a"/>
-      <!-- casinhas de Belém -->
-      <rect x="20" y="170" width="90" height="80" fill="#f2d39b"/><rect x="45" y="200" width="22" height="50" fill="#b07c3f"/>
-      <rect x="500" y="160" width="80" height="90" fill="#f2d39b"/><rect x="520" y="185" width="18" height="18" fill="#b07c3f"/>
-      <!-- Samuel -->
-      <path d="M160 250 L180 160 Q200 140 220 160 L240 250Z" fill="#6a4c93"/>
-      <circle cx="200" cy="135" r="26" fill="#f1c27d"/>
-      <path d="M176 140 Q200 200 224 140 Q212 160 200 158 Q188 160 176 140Z" fill="#f5f5f5"/>
-      <path d="M174 130 Q200 96 226 130 Q200 118 174 130Z" fill="#f5f5f5"/>
-      <circle cx="207" cy="128" r="3" fill="#2b2340"/>
-      <!-- chifre de azeite -->
-      <path d="M232 185 Q262 170 268 140 L280 146 Q270 185 238 198Z" fill="#d9a441" stroke="#9c6b1f" stroke-width="3"/>
-      <path d="M272 138 Q276 128 284 136" stroke="#e8c547" stroke-width="5" fill="none"/>
-      <!-- Eliabe, alto -->
-      <rect x="360" y="170" width="26" height="80" rx="8" fill="#38506b"/>
-      <rect x="392" y="170" width="26" height="80" rx="8" fill="#38506b"/>
-      <path d="M340 90 Q389 70 438 90 L430 180 H348Z" fill="#c0392b"/>
-      <rect x="318" y="92" width="26" height="74" rx="12" fill="#f1c27d" transform="rotate(10 330 92)"/>
-      <rect x="434" y="92" width="26" height="74" rx="12" fill="#f1c27d" transform="rotate(-10 446 92)"/>
-      <circle cx="389" cy="52" r="28" fill="#f1c27d"/>
-      <path d="M361 48 Q389 14 417 48 Q404 34 389 36 Q374 34 361 48Z" fill="#3b2a1a"/>
-      <circle cx="380" cy="52" r="3" fill="#2b2340"/><circle cx="398" cy="52" r="3" fill="#2b2340"/>
-      <path d="M379 64 Q389 70 399 64" stroke="#2b2340" stroke-width="3" fill="none"/>
-      <!-- brilho de "campeão" -->
-      <g fill="#ffb703"><path d="M455 40 l6 14 l14 6 l-14 6 l-6 14 l-6-14 l-14-6 l14-6Z"/><path d="M330 22 l4 9 l9 4 l-9 4 l-4 9 l-4-9 l-9-4 l9-4Z"/></g>
-      <!-- balão de pensamento -->
-      <circle cx="225" cy="95" r="6" fill="#fff"/><circle cx="240" cy="76" r="9" fill="#fff"/>
-      <rect x="160" y="18" width="150" height="48" rx="22" fill="#fff"/>
-      <text x="235" y="50" text-anchor="middle" font-family="Baloo 2, sans-serif" font-size="22" font-weight="800" fill="#2b2340">É esse! 👑</text>
-    </svg>
     <span class="etapa">A história</span>
-    <p>O rei Saul era uma cabeça mais alto que todo mundo (1 Samuel 9.2). Cara de herói de pôster. Mas não obedecia a Deus. Fazia o que queria.</p>
-    <p>Então Deus mandou o profeta Samuel levar um chifre de azeite até Belém, à casa de Jessé: um dos filhos dele seria o novo rei. Samuel tremeu: “Se Saul souber, ele me mata!” (16.2). Foi assim mesmo, com a desculpa de oferecer um sacrifício.</p>
-    <p>O primeiro filho a passar foi Eliabe, o mais velho. Alto, forte, cara de campeão. Samuel pensou: “É esse, com certeza!” Mas Deus disse:</p>
-    <div class="verso">“Não considere sua aparência nem sua altura, pois eu o rejeitei. O Senhor não vê como o homem: o homem vê a aparência, mas o Senhor vê o coração.”<small>1 Samuel 16.7, NVI</small></div>
-    <p>Passaram sete filhos. Sete “nãos”. “Não tem mais ninguém?” Jessé respondeu: “Tem o caçula, mas está cuidando das ovelhas.” Ninguém tinha chamado o menino. Sabe quando escolhem os times no recreio e você sobra por último? Era o Davi.</p>
-
-    <svg class="ilus" viewBox="0 0 600 260" role="img" aria-label="O menino Davi no pasto com seu cajado, cercado de ovelhas">
-      <rect width="600" height="260" fill="#bde0fe"/>
-      <path d="M0 150 Q200 100 380 140 T600 120 V260 H0Z" fill="#5fb35a"/>
-      <path d="M0 200 Q250 170 600 195 V260 H0Z" fill="#4c9a48"/>
-      <!-- Davi -->
-      <path d="M262 230 L272 150 Q290 136 308 150 L318 230Z" fill="#e9c46a"/>
-      <path d="M272 168 L308 168" stroke="#b07c3f" stroke-width="5"/>
-      <circle cx="290" cy="122" r="24" fill="#f1c27d"/>
-      <path d="M266 118 Q268 92 292 94 Q316 94 314 120 Q306 104 292 106 Q276 104 266 118Z" fill="#c1502e"/>
-      <circle cx="282" cy="124" r="3" fill="#2b2340"/><circle cx="298" cy="124" r="3" fill="#2b2340"/>
-      <path d="M282 134 Q290 140 298 134" stroke="#2b2340" stroke-width="3" fill="none"/>
-      <!-- cajado -->
-      <path d="M335 232 V110 Q335 88 352 88 Q368 88 368 104" stroke="#8b5a2b" stroke-width="7" fill="none" stroke-linecap="round"/>
-      <rect x="306" y="160" width="32" height="12" rx="6" fill="#f1c27d" transform="rotate(-15 306 160)"/>
-      <!-- ovelhas -->
-      <defs><g id="ov">
-        <g fill="#fff" stroke="#e5e0d8" stroke-width="2"><circle cx="0" cy="0" r="18"/><circle cx="20" cy="-4" r="20"/><circle cx="40" cy="0" r="18"/><circle cx="20" cy="12" r="16"/></g>
-        <ellipse cx="-14" cy="0" rx="11" ry="9" fill="#3d3a4a"/><circle cx="-17" cy="-2" r="2" fill="#fff"/>
-        <rect x="4" y="18" width="6" height="14" rx="3" fill="#3d3a4a"/><rect x="30" y="18" width="6" height="14" rx="3" fill="#3d3a4a"/>
-      </g></defs>
-      <use href="#ov" x="110" y="200"/>
-      <use href="#ov" x="160" y="160"/>
-      <use href="#ov" x="420" y="190"/>
-      <use href="#ov" x="500" y="150"/>
-      <use href="#ov" x="230" y="235"/>
-    </svg>
-
-    <p>Chegou Davi, ruivo, de olhos bonitos, com cheiro de ovelha. E Deus disse: “É ele.”</p>
-    <div class="verso">“Samuel apanhou o chifre cheio de azeite e o ungiu na presença de seus irmãos, e, a partir daquele dia, o Espírito do Senhor apoderou-se de Davi.”<small>1 Samuel 16.13, NVI</small></div>
+    <p>Deus mandou o profeta Samuel a Belém, à casa de Jessé, para ungir o novo rei de Israel. Ungir era derramar azeite na cabeça de alguém: o sinal de que Deus tinha escolhido aquela pessoa. Samuel foi com medo, porque o rei Saul ainda estava no trono e podia matá-lo (16.2).</p>
+    <p>Entrou Eliabe, o filho mais velho: alto, forte, cara de campeão. Samuel pensou: “É esse!” Mas Deus disse:</p>
+    <div class="verso">“O Senhor não vê como o homem: o homem vê a aparência, mas o Senhor vê o coração.”<small>1 Samuel 16.7, NVI</small></div>
+    <p>Passaram sete filhos. Sete “nãos”. “Não tem mais ninguém?” “Só o caçula, que está cuidando das ovelhas.” Ninguém tinha lembrado de chamar o Davi. Ele chegou do pasto, e Deus disse: “É ele.”</p>
   </section>
-
-  <!-- 3. DETETIVE -->
   <section class="bloco">
-    <span class="etapa">Detetive da Bíblia</span>
-    <h2>Pistas escondidas</h2>
-    <div class="pista">
-      <svg class="lupa" viewBox="0 0 34 34" aria-hidden="true"><circle cx="14" cy="14" r="10" fill="#cdeefe" stroke="#2b2340" stroke-width="4"/><path d="M21 21 L31 31" stroke="#2b2340" stroke-width="5" stroke-linecap="round"/></svg>
-      <p style="margin:0"><b>O azeite.</b> Derramar azeite na cabeça se chamava “ungir”: era o sinal de que Deus escolheu aquela pessoa. “Ungido”, em hebraico, é <i>Messias</i>. Em grego, <i>Cristo</i>. Guarde essa.</p>
-    </div>
-    <div class="pista">
-      <svg class="lupa" viewBox="0 0 34 34" aria-hidden="true"><circle cx="14" cy="14" r="10" fill="#cdeefe" stroke="#2b2340" stroke-width="4"/><path d="M21 21 L31 31" stroke="#2b2340" stroke-width="5" stroke-linecap="round"/></svg>
-      <p style="margin:0"><b>O pastor.</b> Era trabalho de caçula, sem glamour. Mas Davi enfrentou leão e urso para salvar ovelhas (1 Samuel 17.34-35). Ninguém assistia. Deus, sim.</p>
-    </div>
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia1.jpg" alt="Recreio na escola: dois capitães escolhem times e um menino ficou por último no canto; uma menina olha para ele com bondade" loading="lazy"></figure>
+    <p>Olhe a imagem. Os capitães olharam o menino do canto e viram “o mais fraquinho”. A menina está vendo outra coisa. Deus enxerga como ela, só que muito melhor: ele vê o coração.</p>
+    <p>E ele vê o seu também, inclusive a raiva escondida atrás da cara de anjo. Isso pode assustar. Mas lembre quem Deus escolheu: o menino que ninguém chamou.</p>
+    <details><summary>A Bíblia diz que Davi também era bonito (16.12). Então o problema não era a beleza. O que Deus estava medindo?</summary><p class="dica">Ele não é contra a aparência, só não usa ela como régua. Para conhecer o coração de Eliabe, leia 1 Samuel 17.28.</p></details>
   </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>Chame para perto alguém que costuma ficar por último.</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Senhor, tu vês o meu coração. Me ensina a olhar as pessoas do jeito que tu olhas. Amém.</p></section>
+</article>
 
-  <!-- 4. RAIO-X -->
+<!-- DIA 2 -->
+<article class="dia" id="d2">
+  <h1>Coragem de pastor</h1>
+  <p class="ref">1 Samuel 17.32-37 · uns 3 minutos</p>
   <section class="bloco">
-    <svg class="ilus" viewBox="0 0 600 200" role="img" aria-label="Uma lupa mostrando um coração por dentro de uma pessoa desenhada">
-      <rect width="600" height="200" fill="#0f1c2e"/>
-      <g stroke="#8ecae6" stroke-width="4" fill="none" opacity=".55">
-        <circle cx="300" cy="55" r="26"/><path d="M300 81 V150 M262 100 H338 M300 150 L270 190 M300 150 L330 190"/>
-      </g>
-      <path d="M300 128 C270 104 268 84 284 80 C294 78 300 86 300 92 C300 86 306 78 316 80 C332 84 330 104 300 128Z" fill="#e63946"/>
-      <circle cx="300" cy="102" r="52" fill="none" stroke="#ffb703" stroke-width="8"/>
-      <path d="M338 140 L380 182" stroke="#ffb703" stroke-width="14" stroke-linecap="round"/>
-      <text x="40" y="60" font-family="Baloo 2, sans-serif" font-size="30" font-weight="800" fill="#cdeefe">RAIO-X</text>
-      <text x="40" y="92" font-family="Nunito, sans-serif" font-size="18" fill="#8ecae6">modo: coração</text>
-    </svg>
-    <span class="etapa">Jogo do raio-X</span>
-    <h2>Ovelha ou lobo fantasiado?</h2>
-    <p>Super-herói de desenho tem visão de raio-X. Deus tem de verdade. Decida o que você acha e depois aperte o botão.</p>
-
-    <div class="raio">
-      <p style="margin:0"><b>Cena 1.</b> O Léo divide o lanche com um colega. Mas só faz isso quando a professora está olhando.</p>
-      <button type="button" aria-expanded="false">Ligar o raio-X</button>
-      <div class="dentro">Por fora, ovelha. Por dentro, o Léo quer elogio. Dividir é bom, mas Deus também olha o <b>porquê</b>.</div>
-    </div>
-    <div class="raio">
-      <p style="margin:0"><b>Cena 2.</b> A Bia não é a mais popular da turma. No recreio, quando todo mundo zoa o aluno novo, ela vai sentar do lado dele.</p>
-      <button type="button" aria-expanded="false">Ligar o raio-X</button>
-      <div class="dentro">Igual ao Davi no pasto: ninguém aplaudiu, mas ela protegeu a ovelha sozinha.</div>
-    </div>
-    <div class="raio">
-      <p style="margin:0"><b>Cena 3.</b> O Rafa canta bem alto no culto. Dez minutos depois, no carro, briga feio com o irmão.</p>
-      <button type="button" aria-expanded="false">Ligar o raio-X</button>
-      <div class="dentro">Difícil, né? Cantar não era fingimento. Mas o carro mostrou um pedaço do coração que o culto escondia. Quem nunca? Por isso todo mundo precisa de Jesus.</div>
-    </div>
+    <span class="etapa">A história</span>
+    <p>Fazia 40 dias que o gigante Golias desafiava o exército de Israel, de manhã e de tarde (17.16). Os soldados tremiam. Davi, o caçula, só tinha ido levar comida para os irmãos. Quando se ofereceu para lutar, o rei Saul riu: “Você é só um rapaz.”</p>
+    <p>Davi explicou. Pastor não tinha espada. Tinha cajado, funda e coragem, porque as ovelhas eram o sustento da família. Quando um leão ou um urso levava uma ovelha, Davi ia atrás e a tirava da boca do bicho (17.34-35). E concluiu:</p>
+    <div class="verso">“O Senhor, que me livrou das garras do leão e das garras do urso, me livrará das mãos desse filisteu.”<small>1 Samuel 17.37, NVI</small></div>
+    <p>Repare de onde veio a coragem: Davi lembrou o que Deus já tinha feito.</p>
   </section>
-
-  <!-- 5. PENSAR -->
   <section class="bloco">
-    <span class="etapa">Pensa comigo</span>
-    <h2>Perguntas para quebrar a cabeça</h2>
-    <p>Não tem resposta pronta. Pense, converse com alguém de casa e, se travar, abra a dica.</p>
-    <details>
-      <summary>A Bíblia diz que Davi também era bonito (16.12). Então Deus não liga pra aparência? Ser bonito é ruim?</summary>
-      <p class="dica">Eliabe e Davi eram bonitos. Deus não é contra a aparência, só não usa ela como régua. O que ele mediu, então?</p>
-    </details>
-    <details>
-      <summary>Quer saber o que tinha no coração de Eliabe? Leia 1 Samuel 17.28. Bateu com o que Deus viu?</summary>
-      <p class="dica">Repare como ele fala com o irmão caçula. O coração sempre acaba aparecendo.</p>
-    </details>
-    <details>
-      <summary>Deus ver o seu coração é uma notícia boa ou assustadora? Pode ser as duas coisas?</summary>
-      <p class="dica">No esconde-esconde com Deus, ninguém ganha. Isso assusta quando a gente esconde alguma coisa. E acalma quando ninguém mais entende o que a gente sente.</p>
-    </details>
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia2.jpg" alt="Menina na cama à noite, com sombras de leão e urso na parede feitas pelos brinquedos; ela ora e a luz do abajur afasta as sombras" loading="lazy"></figure>
+    <p>Hoje os nossos leões são outros: a prova, o médico, a briga em casa, o escuro. Olhe a imagem: as sombras parecem enormes, mas a menina não fingiu que não estava com medo. Ela levou o medo para Deus.</p>
+    <details><summary>Qual é a diferença entre ser corajoso e não sentir medo?</summary><p class="dica">Davi provavelmente sentiu o coração disparar diante do leão. Coragem é ir mesmo assim, confiando em quem está com você.</p></details>
   </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>Lembre uma vez em que Deus te ajudou. Conte para alguém da sua casa.</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Senhor, tu já me ajudaste antes. Quando eu tiver medo, me lembra disso. Amém.</p></section>
+</article>
 
-  <!-- 6. CONFRONTO E RECONCILIAÇÃO -->
+<!-- DIA 3 -->
+<article class="dia" id="d3">
+  <h1>A ovelha que sumiu</h1>
+  <p class="ref">Lucas 15.1-7 · uns 3 minutos</p>
   <section class="bloco">
-    <span class="etapa">A parte difícil e a parte boa</span>
-    <p>A parte difícil: o raio-X de Deus também passa por você. Aquela cara de anjo com raiva por dentro? Ele viu. Fantasia nenhuma funciona com ele.</p>
-    <p>A parte boa: Deus olhou os corações e escolheu o menino que ninguém chamou. Davi não era perfeito; adulto, errou feio. Mas o coração dele voltava para Deus.</p>
-    <p>Mil anos depois, na mesma Belém, nasceu um descendente de Davi. Também pastor. Jesus, o Cristo, o Ungido, o Bom Pastor (João 10.11). Ele não só enxerga o coração. Ele promete trocar.</p>
-    <div class="verso">“Darei a vocês um coração novo e porei um espírito novo em vocês.”<small>Ezequiel 36.26, NVI</small></div>
+    <span class="etapa">A história</span>
+    <p>Cobradores de impostos trabalhavam para Roma e muitas vezes cobravam a mais. O povo os via como traidores. Mesmo assim, eles vinham ouvir Jesus. Os fariseus reclamaram: “Este homem recebe pecadores e come com eles” (15.2). Naquele tempo, comer junto era sinal de amizade.</p>
+    <p>Então Jesus contou uma história. Um pastor tinha cem ovelhas e uma se perdeu. Ovelha perdida não sabe voltar sozinha: fica parada, balindo. O pastor deixou as outras 99 e foi atrás até encontrar. Colocou a ovelha nos ombros, voltou para casa e chamou os amigos para comemorar.</p>
+    <div class="verso">“Haverá mais alegria no céu por um pecador que se arrepende do que por noventa e nove justos que não precisam arrepender-se.”<small>Lucas 15.7, NVI</small></div>
   </section>
-
-  <!-- 7. DESAFIO -->
-  <section class="bloco desafio">
-    <h2>Missão secreta de hoje</h2>
-    <p>Faça uma coisa boa que ninguém vai ver: arrume algo que não é seu, ajude sem ser chamado, ore por quem te irritou. Não conte pra ninguém. Só você e Deus vão saber.</p>
-  </section>
-
   <section class="bloco">
-    <span class="etapa">Oração</span>
-    <p class="oracao">Senhor, tu vês o meu coração. Às vezes eu me fantasio de bonzinho. Obrigado porque tu escolhes quem ninguém escolheu. Me dá um coração novo, de ovelha que ouve a tua voz. Em nome de Jesus, amém.</p>
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia3.jpg" alt="Menino perdido no corredor do supermercado e o pai chegando correndo, aliviado, para abraçá-lo" loading="lazy"></figure>
+    <p>Você já se perdeu num mercado? Olhe a imagem: quem procurou quem? O pai não ficou esperando o filho achar o caminho. E quando encontrou, não começou com bronca. Começou com abraço. É assim que Jesus trata quem estava longe.</p>
+    <details><summary>Jesus contou essa história para os pecadores ou para os fariseus que reclamavam? Faz diferença?</summary><p class="dica">Releia o versículo 2. Os fariseus se achavam as 99 ovelhas certinhas. Será que eles se alegrariam com a festa?</p></details>
   </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>Pense em alguém que parece “de fora” na sua turma. Faça uma coisa para essa pessoa se sentir encontrada.</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Jesus, obrigado porque tu vens atrás de mim quando eu me perco. Amém.</p></section>
+</article>
 
-  <!-- PAIS -->
-  <section class="bloco pais">
-    <h3>Para pais e professores</h3>
-    <ul>
-      <li>Leitura de 4 a 5 minutos para uma criança de 10 anos lendo sozinha. Lida em voz alta, com as perguntas, rende uns 10 minutos de conversa.</li>
-      <li>O tema conversa com a Semana 7 do site (“Lobos ou ovelhas?”). Em Mateus 7.15, o sentido primeiro é sobre falsos profetas. Usar a imagem para o coração de cada um é uma aplicação, como no sermão.</li>
-      <li>1 Samuel 16.10-11 dá a entender que Jessé tinha oito filhos. 1 Crônicas 2.13-15 lista sete, com Davi como o sétimo. Uma explicação comum é que um deles morreu cedo e não entrou na genealogia.</li>
-      <li>“Ruivo” (16.12) traduz <i>admoni</i>, “avermelhado”. Pode se referir ao cabelo ou à pele. A aparência de Davi é elogiada na Bíblia; o ponto do versículo 7 não é que beleza seja ruim, e sim que ela não é o critério de Deus.</li>
-      <li>A unção de Davi não o fez rei na hora. Ele ainda esperou anos, servindo inclusive na corte de Saul, até ser coroado (2 Samuel 2.4; 5.3). Bom gancho para outro dia.</li>
-      <li>As perguntas não têm resposta pronta de propósito. Se a criança disser algo diferente do esperado, peça que ela mostre no texto de onde tirou. É assim que se aprende a ler a Bíblia.</li>
-    </ul>
+<!-- DIA 4 -->
+<article class="dia" id="d4">
+  <h1>Eu conheço essa voz</h1>
+  <p class="ref">João 10.1-5, 27 · uns 3 minutos</p>
+  <section class="bloco">
+    <span class="etapa">A história</span>
+    <p>À noite, os pastores de Israel guardavam as ovelhas num cercado de pedras chamado aprisco. Às vezes, rebanhos de donos diferentes dormiam juntos. De manhã, cada pastor chamava as suas, e só as dele saíam. O pastor não empurrava o rebanho por trás: ia na frente, e as ovelhas seguiam.</p>
+    <p>Jesus usou essa cena para falar de quem é dele. As ovelhas nunca seguem um estranho: fogem dele, porque não conhecem a voz de estranhos (10.5).</p>
+    <div class="verso">“As minhas ovelhas ouvem a minha voz; eu as conheço, e elas me seguem.”<small>João 10.27, NVI</small></div>
   </section>
+  <section class="bloco">
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia4.jpg" alt="Pátio cheio e barulhento na saída da escola; uma criança vira a cabeça ao reconhecer a mãe chamando" loading="lazy"></figure>
+    <p>Na saída da escola tem cem vozes gritando. Mesmo assim, você reconhece a da sua mãe na hora. Por quê? Porque passou muito tempo com ela. Com Jesus é igual: hoje a gente ouve a voz dele principalmente pela Bíblia. Quanto mais você lê o que ele disse, mais fácil fica reconhecer.</p>
+    <details><summary>Quando duas pessoas dão conselhos diferentes, como saber qual combina com Jesus?</summary><p class="dica">Pergunte: isso parece com o jeito que Jesus falava e agia? Se você não sabe, é sinal de que precisa conhecer melhor a voz dele.</p></details>
+  </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>Leia Mateus 5.3-9 e escolha a frase que mais “soa como Jesus” para você.</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Jesus, eu quero conhecer a tua voz tão bem quanto conheço a voz de casa. Amém.</p></section>
+</article>
 
-  <p class="rodape">Devocional kids · versão de teste · ilustrações desenhadas para esta página</p>
+<!-- DIA 5 -->
+<article class="dia" id="d5">
+  <h1>Fantasia de ovelha</h1>
+  <p class="ref">Mateus 7.15-20 · uns 3 minutos</p>
+  <section class="bloco">
+    <span class="etapa">A história</span>
+    <p>Quase no fim do Sermão do Monte, Jesus deu um aviso: cuidado com os falsos profetas. Eles chegam vestidos de ovelha, mas por dentro são lobos. Naquele tempo, alguns profetas usavam uma capa de pelos como uniforme. Até gente mentirosa vestia a capa para parecer profeta (Zacarias 13.4).</p>
+    <p>Como descobrir quem é quem? Jesus responde com uma árvore. Ninguém colhe uva de espinheiro.</p>
+    <div class="verso">“Vocês os reconhecerão por seus frutos.”<small>Mateus 7.16, NVI</small></div>
+    <p>Atenção: Jesus falava de quem ensina errado sobre Deus. Não é para sair desconfiando de todo mundo nem julgar alguém por um erro só. Fruto aparece com o tempo.</p>
+  </section>
+  <section class="bloco">
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia5.jpg" alt="Criança no quintal comparando duas árvores: uma com frutas boas e outra com frutas bonitas por fora e bichadas por dentro" loading="lazy"></figure>
+    <p>Olhe a imagem. Por fora, as duas frutas parecem iguais. Só abrindo dá para saber. Com gente é parecido: palavras bonitas são a casca; o jeito de tratar os outros, dia após dia, é o que tem dentro.</p>
+    <details><summary>Se alguém fala coisas lindas sobre Deus, mas vive maltratando os outros, o que vale mais? E se esse alguém for eu?</summary><p class="dica">Jesus não mandou olhar só os frutos dos outros. A pergunta mais difícil é sobre a nossa árvore.</p></details>
+  </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>À noite, pense: que tipo de fruto as minhas palavras deram hoje?</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Senhor, não quero só parecer ovelha. Faz crescer em mim fruto bom de verdade. Amém.</p></section>
+</article>
+
+<!-- DIA 6 -->
+<article class="dia" id="d6">
+  <h1>De perseguidor a seguidor</h1>
+  <p class="ref">Atos 9.1-20 · uns 3 minutos</p>
+  <section class="bloco">
+    <span class="etapa">A história</span>
+    <p>Saulo odiava os seguidores de Jesus. Pegou cartas do sumo sacerdote que o autorizavam a prender cristãos em Damasco, uma viagem de vários dias a pé. No caminho, uma luz do céu o derrubou, e uma voz perguntou: “Saulo, Saulo, por que você me persegue?” (9.4). Era Jesus. Saulo ficou cego por três dias.</p>
+    <p>Então Deus mandou um cristão chamado Ananias ir orar por ele. Ananias tremeu: “Senhor, tenho ouvido muita coisa a respeito desse homem” (9.13). Deus respondeu:</p>
+    <div class="verso">“Vá! Este homem é meu instrumento escolhido.”<small>Atos 9.15, NVI</small></div>
+    <p>Ananias foi. E a primeira palavra que disse ao antigo inimigo foi: “Irmão Saulo” (9.17).</p>
+  </section>
+  <section class="bloco">
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia6.jpg" alt="Um menino que costumava implicar pede desculpas, e uma criança hesita mas estende a mão para ele" loading="lazy"></figure>
+    <p>Olhe a imagem. Aquele colega que vivia implicando veio pedir desculpas. Dar uma chance não é fingir que nada aconteceu: Ananias sabia de tudo. Mas ele acreditou que Jesus muda corações. Se alguém te machuca de verdade, conte para um adulto. Perdoar não é ficar sozinho com o perigo.</p>
+    <details><summary>Se você fosse Ananias, o que seria mais difícil: obedecer ou acreditar que Saulo podia mudar?</summary><p class="dica">E pense: tem algo em você que só Jesus consegue mudar? Saulo não mudou por esforço. Mudou porque encontrou Jesus.</p></details>
+  </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>Dê uma nova chance a alguém com quem você estava de mal.</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Jesus, tu mudaste o Saulo. Muda também o que está errado em mim. Amém.</p></section>
+</article>
+
+<!-- DIA 7 -->
+<article class="dia" id="d7">
+  <h1>O Bom Pastor</h1>
+  <p class="ref">João 10.11-15 e Salmo 23.1 · uns 3 minutos</p>
+  <section class="bloco">
+    <span class="etapa">A história</span>
+    <p>Davi, o menino pastor, escreveu: “O Senhor é o meu pastor; de nada terei falta” (Salmo 23.1). Mil anos depois, Jesus disse algo que deixou todo mundo espantado:</p>
+    <div class="verso">“Eu sou o bom pastor. O bom pastor dá a sua vida pelas ovelhas.”<small>João 10.11, NVI</small></div>
+    <p>Jesus comparou dois tipos de pastor. O empregado cuidava das ovelhas por salário. Quando via o lobo, fugia, porque as ovelhas não eram dele. O dono ficava. Jesus foi além: deu a vida na cruz pelas ovelhas e depois a recebeu de volta, ressuscitando (10.17-18).</p>
+  </section>
+  <section class="bloco">
+    <span class="etapa">Na vida real</span>
+    <figure><img src="img/dia7.jpg" alt="Criança dormindo tranquila à noite; pela janela, um pastor com lanterna vigia as ovelhas no morro" loading="lazy"></figure>
+    <p>Olhe a imagem. A criança dorme em paz porque alguém está acordado cuidando. A Bíblia diz que o Senhor que nos protege não cochila nem dorme (Salmo 121.4).</p>
+    <p>Depois de sete dias, guarde isto: você não precisa ser uma ovelha perfeita para ser amado pelo Pastor. É porque ele já te ama que você pode confiar nele e segui-lo.</p>
+    <details><summary>O que muda quando alguém cuida de você por obrigação ou por amor?</summary><p class="dica">Pense no empregado e no dono. O que cada um faz quando aparece o lobo?</p></details>
+  </section>
+  <section class="bloco missao"><span class="etapa">Missão de hoje</span><p>Decore o Salmo 23.1 e repita antes de dormir.</p></section>
+  <section class="bloco"><span class="etapa">Oração</span><p class="oracao">Jesus, tu és o meu Bom Pastor. Obrigado por dar a tua vida por mim. Eu quero te seguir. Amém.</p></section>
+</article>
+
+<button class="lido" id="lido" type="button">Marcar como lido</button>
+
+<section class="bloco pais">
+  <h3>Para pais e professores</h3>
+  <ul>
+    <li>Série de 7 dias, cerca de 3 minutos de leitura por dia para uma criança de 10 anos. Lida junto, com as perguntas, rende uns 10 minutos.</li>
+    <li>As perguntas não têm resposta pronta. Se a criança responder algo diferente do esperado, peça que mostre no texto de onde tirou.</li>
+    <li>Dia 5: o aviso de Mateus 7.15 é sobre falsos profetas. Aplicar a imagem aos frutos de cada um é uma extensão, e a série evita ensinar a criança a rotular pessoas.</li>
+    <li>Dia 6: a Bíblia não chama Saulo de lobo. O ponto é a transformação. A nota sobre contar a um adulto protege a criança de entender “perdoar” como “ficar exposta”.</li>
+    <li>1 Samuel 16.10-11 sugere oito filhos de Jessé; 1 Crônicas 2.13-15 lista sete. Uma explicação comum é que um morreu cedo.</li>
+    <li>Imagens geradas com o ChatGPT. Plano e contexto da série foram conferidos com ele e revisados por nós.</li>
+  </ul>
+</section>
 </main>
 <script>
-document.querySelectorAll('.raio button').forEach(function(b){
-  b.addEventListener('click',function(){
-    var d=b.nextElementSibling, on=!d.classList.contains('on');
-    d.classList.toggle('on',on); b.setAttribute('aria-expanded',on);
-    b.textContent=on?'Desligar o raio-X':'Ligar o raio-X';
-  });
-});
+(function(){
+  var dias=[].slice.call(document.querySelectorAll('.dia')), n=dias.length, key='kids-ovelha-lidos';
+  var lidos=JSON.parse(localStorage.getItem(key)||'[]');
+  var i=+(location.hash.replace('#dia','')||0)-1;
+  if(!(i>=0&&i<n)){i=0;for(var k=0;k<n;k++){if(lidos.indexOf(k)<0){i=k;break}}}
+  var b=document.getElementById('lido');
+  function show(){
+    dias.forEach(function(d,j){d.classList.toggle('on',j===i)});
+    document.getElementById('cont').textContent='Dia '+(i+1)+' de '+n;
+    document.getElementById('ant').disabled=i===0;
+    document.getElementById('prox').disabled=i===n-1;
+    var ok=lidos.indexOf(i)>=0; b.classList.toggle('ok',ok); b.textContent=ok?'Lido ✓':'Marcar como lido';
+    history.replaceState(null,'','#dia'+(i+1)); window.scrollTo(0,0);
+  }
+  document.getElementById('ant').onclick=function(){if(i>0){i--;show()}};
+  document.getElementById('prox').onclick=function(){if(i<n-1){i++;show()}};
+  b.onclick=function(){var p=lidos.indexOf(i); if(p<0)lidos.push(i); else lidos.splice(p,1); localStorage.setItem(key,JSON.stringify(lidos)); show()};
+  document.querySelectorAll('figure img').forEach(function(im){im.onerror=function(){im.parentNode.style.display='none'}});
+  show();
+})();
 </script>
 </body>
 </html>
